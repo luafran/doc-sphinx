@@ -19,7 +19,9 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 ASCIITOSVG = ./asciitosvg/a2s
-PNGIMAGES = source/images/fig2.png
+TXTIMAGES = source/images/fig2.txt
+SVGIMAGES = $(TXTIMAGES:.txt=.svg)
+PNGIMAGES = $(TXTIMAGES:.txt=.png)
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest coverage gettext
 
@@ -68,7 +70,7 @@ clean:
 	@echo "Building $<"
 	inkscape -f $< -E $@s
 
-html: ${PNGIMAGES}
+html: ${SVGIMAGES}
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

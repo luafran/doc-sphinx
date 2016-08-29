@@ -1,0 +1,2 @@
+Sphinx>=1.4.6
+sphinxcontrib-aafig>=1.0

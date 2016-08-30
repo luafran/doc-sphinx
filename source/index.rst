@@ -11,7 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 3
 
-   chapter1.rst 
+   chapter1.rst
+   chapter2.rst
 
 
 Indices and tables

@@ -19,7 +19,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 ASCIITOSVG = ./asciitosvg/a2s
-TXTIMAGES = source/images/fig2.txt
+TXTIMAGES = source/images/fig1.txt source/images/fig2.txt
 SVGIMAGES = $(TXTIMAGES:.txt=.svg)
 PNGIMAGES = $(TXTIMAGES:.txt=.png)
 

@@ -1,5 +1,5 @@
-Title of Chapter 1
-******************
+Chapter 1
+*********
 
 Section 1
 =========
@@ -35,25 +35,34 @@ Some example taken from a python file
 
 .. literalinclude:: ./examples/example.py
 
-Example of SVG/EPS figure
+Examples of SVG/EPS figure
 
-.. figure:: ./images/fig2.*
+.. figure:: ./images/fig1.*
     :alt: figure 1
     :align: center
 
-    This is the caption
+    This is the caption for figure 1
+
+.. figure:: ./images/fig2.*
+    :alt: figure 2
+    :align: center
+
+    This is the caption for figure 2
+
 
 *Intel Security Data Bus* is a solution intended for Intel Security groups (and maybe others) needing a highly
 scalable, reliable and low latency solution to satisfy real-time messaging and stream processing needs to
 organise and manage massive amounts of data, making it easily accessible in a unified messaging platform
 that’s always readily available for many uses throughout the entire organization.
 
-Lets do a aafigure diagram
+Adding a link
+
+`Databus Javadoc <http://databus-sdk-javadoc.fastdxl.net/1.0.0/>`_
 
 We can also include java code from files
 
 .. literalinclude:: ./examples/ProducerExample.java
     :language: java
-    :emphasize-lines: 12,15-18
+    :emphasize-lines: 66,68,75,88-89
     :linenos:
 

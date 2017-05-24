@@ -1,0 +1,24 @@
+# Note: Add these lines to your /etc/hosts file. They are used by zookeeper and kafka images
+# 127.0.0.1       zookeeper-1 kafka-1
+# 127.0.0.2       zookeeper-2 kafka-2
+# 127.0.0.3       zookeeper-3 kafka-3
+
+version: "2"
+services:
+    zookeeper:
+        image: "zookeeper:3.4.8.10"
+        network_mode: "host"
+        ports:
+            - "2181:2181"
+    kafka:
+        image: "kafka:0.9.0.1.19"
+        network_mode: "host"
+        ports:
+            - "9092:9092"
+        environment:
+            KAFKA_ZOOKEEPER_CONNECT: "zookeeper-1:2181"
+            KAFKA_BROKER_ID: "1"
+            KAFKA_LISTENERS: "PLAINTEXT://kafka-1:9092"
+            KAFKA_LOG_DIRS: "/tmp/kafka-logs"
+        depends_on:
+            - zookeeper
